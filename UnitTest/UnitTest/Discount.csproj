@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5F9785F9-2DA8-4987-B163-190C2F941DE2}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>CalculatorMSC</RootNamespace>
     <AssemblyName>UnitTest</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,10 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calculator.cs" />
+    <Compile Include="Calculators\AbstractCalculator.cs" />
+    <Compile Include="Calculators\AbstractCalculatorFactory.cs" />
+    <Compile Include="Calculators\Types\Type4Calculator.cs" />
+    <Compile Include="Calculators\Types\Type3Calculator.cs" />
+    <Compile Include="Calculators\Types\Type2Calculator.cs" />
+    <Compile Include="Calculators\Types\Type1Calculator.cs" />
     <Compile Include="ClassToRefactor.cs" />
-    <Compile Include="DiscountManager.cs" />
-    <Compile Include="ICalculator.cs" />
+    <Compile Include="Discount.cs" />
+    <Compile Include="Interfaces\ICalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -55,5 +63,6 @@
   <ItemGroup>
     <Compile Include="Customer.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
