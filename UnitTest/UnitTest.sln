@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discount", "UnitTest\Discount.csproj", "{5F9785F9-2DA8-4987-B163-190C2F941DE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscountTest", "BankTests\DiscountTest.csproj", "{E066D94F-498E-4901-B119-43124E584AF0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscountTest", "DiscountTests\DiscountTest.csproj", "{E066D94F-498E-4901-B119-43124E584AF0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

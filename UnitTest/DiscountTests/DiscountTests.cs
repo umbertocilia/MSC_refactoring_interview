@@ -61,7 +61,34 @@ namespace CalculatorTest
             Assert.ThrowsException<ArgumentException>(() => disc.Add(Customer.Type.MostValuable, new Type4Calculator()));
         }
 
+        [TestMethod]
+        public void ZerosTest()
+        {
+            Discount disc = new Discount();
 
+            disc.Add(Customer.Type.Unregistered, new Type1Calculator());
+            disc.Add(Customer.Type.Registered, new Type2Calculator());
+            disc.Add(Customer.Type.Valuable, new Type3Calculator());
+            disc.Add(Customer.Type.MostValuable, new Type4Calculator());
+
+
+            disc.SetCalculator(Customer.Type.Unregistered);
+
+            decimal result = disc.GetCalculator().Calculate(0, 0);
+            Assert.AreEqual(0, result);
+
+            disc.SetCalculator(Customer.Type.Registered);
+            result = disc.GetCalculator().Calculate(0, 0);
+            Assert.AreEqual(0, result);
+
+            disc.SetCalculator(Customer.Type.Valuable);
+            result = disc.GetCalculator().Calculate(0, 0);
+            Assert.AreEqual(0, result);
+
+            disc.SetCalculator(Customer.Type.MostValuable);
+            result = disc.GetCalculator().Calculate(0, 0);
+            Assert.AreEqual(0, result);
+        }
     }
 }
 
